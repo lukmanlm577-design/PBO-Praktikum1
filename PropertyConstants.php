@@ -8,6 +8,13 @@ class produk{
     public int $StokProduk;
 
     public const PAJAK = 0.11;
+    public function __construct($kode,$nama,$harga,$stok) {
+        $this -> KodeProduk = $kode;
+        $this -> NamaProduk = $nama;
+        $this -> HargaProduk = $harga;
+        $this -> StokProduk = $stok;
+
+    }
     public function pajak(){
         return self::PAJAK *100;
     }
@@ -18,15 +25,7 @@ class produk{
 
 }       
 
-$produk1 = new produk();
-$produk1->KodeProduk = 'P001';
-$produk1->NamaProduk = 'Laptop';
-$produk1->HargaProduk = 10000000;
-$produk1->StokProduk = 5;
-
-
-
-//$totalHarga = $produk1->HargaProduk + $jumlahPajak;
+$produk1 = new produk('P001','Laptop',1000000,5);
 
 
 echo "Kode Produk: " . $produk1->KodeProduk . "<br>";
