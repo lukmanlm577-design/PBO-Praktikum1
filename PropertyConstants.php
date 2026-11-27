@@ -1,6 +1,6 @@
 <?php
 namespace PBO\MarketPlace;
-class Produk {
+trait Produk {
 
     private string $KodeProduk;
     private string $NamaProduk;
